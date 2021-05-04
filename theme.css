@@ -14,10 +14,12 @@ main {
   background: inherit;
   position: relative;
 }
+
 .datails_title {
   font-size: 20px;
   font-weight: 600;
 }
+
 .page {
   position: relative;
   padding: 3em;
@@ -25,10 +27,12 @@ main {
   box-shadow: 0 10px 100px 0 #2224261a;
   transition: box-shadow 0.2s linear;
 }
+
 .contacts li a {
   color: inherit;
   transition: color 0.2s ease-in-out;
 }
+
 .details > input::after {
   content: " ";
   border-top: 0.35em solid transparent;
@@ -41,6 +45,7 @@ main {
   height: 0.9em;
   cursor: pointer;
 }
+
 .divider.fat {
   color: inherit;
   border-top: 0.3571428571428571em solid;
@@ -49,20 +54,17 @@ main {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: color 150ms var(--timing-function),
-    background-color 150ms var(--timing-function);
+  transition: background-color 150ms var(--timing-function);
 }
 
 body.light-theme {
-  background: #ffffff;
-  color: #333333;
+  background: #fff;
+  color: #333;
 }
 
 body.dark-theme {
   background: #02011ab0;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* THEME SWITCH */
@@ -122,7 +124,7 @@ body.dark-theme {
 
 .theme-switch__marker {
   position: relative;
-  background-color: #ffffff;
+  background-color: #fff;
   width: 26px;
   height: 26px;
   border-radius: 50%;
