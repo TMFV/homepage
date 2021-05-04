@@ -6,12 +6,40 @@
       rel="stylesheet"
       href="https://binary-studio-academy.github.io/stage-2/assets/stylesheets/base.css"
     />
+    <link rel="stylesheet" href="./theme.css" />
     <title>DONALD TRUMP</title>
   </head>
-  <body>
+  <body id="body">
+    <!-- Разметка переключателя темы -->
+    <div class="theme-switch">
+      <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+        <use href="./images/sprite.svg#sun"></use>
+      </svg>
+
+      <div class="theme-switch__control">
+        <input
+          class="theme-switch__toggle"
+          type="checkbox"
+          name="theme"
+          id="theme-switch-toggle"
+          aria-label="Переключить между тёмной и светлой темой"
+        />
+        <label
+          aria-hidden="true"
+          class="theme-switch__track"
+          for="theme-switch-toggle"
+        >
+        </label>
+        <div aria-hidden="true" class="theme-switch__marker"></div>
+      </div>
+
+      <svg class="theme-switch__icon" aria-label="Иконка луны">
+        <use href="./images/sprite.svg#moon"></use>
+      </svg>
+    </div>
     <main>
       <article>
-        <div class="page" style="border-color: midnightblue">
+        <div id="page" class="page" style="border-color: midnightblue">
           <div class="stackable grid">
             <div class="row">
               <div class="three wide center aligned column">
@@ -25,12 +53,16 @@
                   ></object>
                 </div>
               </div>
+
               <div class="thirteen wide column">
                 <div class="stackable grid">
                   <div class="sixteen wide column">
                     <!-- Name, job, contacts -->
                     <h1 class="name">DONALD TRUMP</h1>
-                    <div class="job">45th president of the United States</div>
+                    <div class="job">
+                      45th president of the United States 🇺🇸
+                    </div>
+
                     <ul class="contacts">
                       <li>
                         <a
@@ -141,10 +173,10 @@
               <div class="ten wide column">
                 <ul>
                   <!-- Experience -->
-                  <li class="details">
+                  <li class="details highlighted">
                     <input type="checkbox" id="other" />
                     <label for="other" class="summary"
-                      ><h3>Experience</h3></label
+                      ><h3 class="datails_title">Experience 💼</h3></label
                     >
                     <div>
                       <ul class="timeline">
@@ -377,98 +409,11 @@
                       </ul>
                     </div>
                   </li>
-                  <!-- PERSONAL LIFE -->
-                  <li class="details">
-                    <input type="checkbox" id="other" />
-                    <label for="other" class="summary"
-                      ><h3>PERSONAL LIFE</h3></label
-                    >
-                    <div>
-                      <ul class="timeline">
-                        <!-- Events -->
-                        <li>
-                          <p>
-                            <em> 2006</em>
-                          </p>
-                          <p>
-                            Melania gained United States citizenship and gave
-                            birth to our son, Barron
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 2005</em>
-                          </p>
-                          <p>Married her</p>
-                        </li>
-
-                        <li>
-                          <p>
-                            <em> 1999</em>
-                          </p>
-                          <p>Divorced Marla ¯_(ツ)_/¯</p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1998</em>
-                          </p>
-                          <p>Met my future third wife, Melania Knauss</p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1993</em>
-                          </p>
-                          <p>
-                            Married Marla and had a daughter, we named her
-                            Tiffany, because I like Tiffany & Company jewellery
-                            as well
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1992</em>
-                          </p>
-                          <p>
-                            Started affair with Marla Maples, so I had to
-                            divorce. God knows I love nice women, I love them
-                            all!
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1984</em>
-                          </p>
-                          <p>Birth of Eric Trump</p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1982</em>
-                          </p>
-                          <p>Birth of Ivanka Trump</p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1977</em>
-                          </p>
-                          <p>
-                            My first son is born. I called him Donald, of
-                            course!
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <em> 1977</em>
-                          </p>
-                          <p>Married Czech model Ivana Zelníčková</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
                   <!-- MEDIA CAREER -->
-                  <li class="details">
-                    <input type="checkbox" id="other" />
-                    <label for="other" class="summary"
-                      ><h3>MEDIA CAREER</h3></label
+                  <li class="details highlighted">
+                    <input type="checkbox" id="other2" />
+                    <label for="other2" class="summary"
+                      ><h3>MEDIA CAREER 🎥</h3></label
                     >
                     <div>
                       <ul class="timeline">
@@ -711,10 +656,10 @@
                     </div>
                   </li>
                   <!-- EDUCATION -->
-                  <li class="details">
-                    <input type="checkbox" id="other" />
-                    <label for="other" class="summary"
-                      ><h3>EDUCATION</h3></label
+                  <li class="details highlighted">
+                    <input type="checkbox" id="other3" checked />
+                    <label for="other3" class="summary"
+                      ><h3>EDUCATION 🎓</h3></label
                     >
                     <div>
                       <ul class="timeline">
@@ -761,16 +706,184 @@
                       </ul>
                     </div>
                   </li>
+                  <!-- PERSONAL LIFE -->
+                  <li class="details highlighted">
+                    <input type="checkbox" id="other1" checked />
+                    <label for="other1" class="summary"
+                      ><h3>PERSONAL LIFE 💍</h3></label
+                    >
+                    <div>
+                      <ul class="timeline">
+                        <!-- Events -->
+                        <li>
+                          <p>
+                            <em> 2006</em>
+                          </p>
+                          <p>
+                            Melania gained United States citizenship and gave
+                            birth to our son, Barron
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 2005</em>
+                          </p>
+                          <p>Married her</p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <em> 1999</em>
+                          </p>
+                          <p>Divorced Marla ¯_(ツ)_/¯</p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1998</em>
+                          </p>
+                          <p>Met my future third wife, Melania Knauss</p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1993</em>
+                          </p>
+                          <p>
+                            Married Marla and had a daughter, we named her
+                            Tiffany, because I like Tiffany & Company jewellery
+                            as well
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1992</em>
+                          </p>
+                          <p>
+                            Started affair with Marla Maples, so I had to
+                            divorce. God knows I love nice women, I love them
+                            all!
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1984</em>
+                          </p>
+                          <p>Birth of Eric Trump</p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1982</em>
+                          </p>
+                          <p>Birth of Ivanka Trump</p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1977</em>
+                          </p>
+                          <p>
+                            My first son is born. I called him Donald, of
+                            course!
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <em> 1977</em>
+                          </p>
+                          <p>Married Czech model Ivana Zelníčková</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
               </div>
 
               <div class="six wide column">
                 <!-- Languages -->
+                <section>
+                  <h3>Languages</h3>
+                  <ul>
+                    <li>
+                      <span class="language" lang="en"
+                        >&#x1f1fa;&#x1f1f8; ENGLISH</span
+                      >
+                    </li>
+                    <li></li>
+                    <span class="language">&#x1f1f7;&#x1f1fa; РУССКИЙ</span>
+                  </ul>
+                </section>
                 <!-- Skills -->
+                <section>
+                  <h3>Skills</h3>
+                  <p class="tags small">
+                    NEGOTIATING COUNTING REMODELING WRITING ACING SINGING
+                    REPORTING INCORPORATING SELLING ADVERTISING HOSTING
+                    COMPETING TWITTING PARENTING GAMBLING DATING SUING
+                    ORGANIZING FUNDING DEBATING ADVISING PRESBYTERIANING
+                  </p>
+                </section>
                 <!-- Character -->
+                <section>
+                  <h3>Character</h3>
+                  <p class="tags small">
+                    ADJUSTED CALM AMBITIOUS COMPETITIVE SOCIABLE DIRECT HOSTILE
+                    CARELESS IGNORANT INQUISITIVE BOLD CONFIDENT MISCHIEVOUS
+                    CHARMING INTERESTING DARING COLORFUL LAZY SELF-PROMOTING
+                  </p>
+                </section>
                 <!-- Likes -->
+                <section>
+                  <h3>Likes&#x1f603;</h3>
+                  <p class="tags small">
+                    <a
+                      href="https://www.youtube.com/watch?v=u_aLESDql1U"
+                      rel="nofollow"
+                      >BILLIONS</a
+                    >
+                    FILET-O-FISH BIG MAC
+                    <a
+                      href="https://www.youtube.com/watch?v=RDrfE9I8_hs"
+                      rel="nofollow"
+                      >CHINA</a
+                    >
+                    QUARTER POUNDER DIET COKE TARIFFS BIBLE ARTOF DEAL PATRIOTS
+                    BEAUTIFUL MODELS GOLD REAL ESTATE WAR PROTESTERS
+                    CONSTRUCTION RUSSIANS BANKS SPORTS WOMEN MEXICO RED HAT
+                    KOREANS GOLF EVERYBODY
+                    <sup
+                      ><a
+                        href="https://www.youtube.com/watch?v=0f9ysmciWUk"
+                        rel="nofollow"
+                        >[1]</a
+                      >
+                      <a
+                        href="https://www.youtube.com/watch?v=TTdmKaXAfAs"
+                        rel="nofollow"
+                        >[2]</a
+                      ></sup
+                    >
+                  </p>
+                </section>
                 <!-- Dislikes -->
+                <section>
+                  <h3>Dislikes&#x1f61e;</h3>
+                  <p class="tags small">
+                    DOGS MEDIA CNN GERMANS MEXICANS IMMIGRANTS SHITHOLE
+                    COUNTRIES UNATTRACTIVE WOMEN BLACKS SUSHI HOT-DOGS ALCOHOL
+                    FRUIT CHRISTMAS PARTIES LIBERALS
+                  </p>
+                </section>
                 <!-- Wants -->
+                <section>
+                  <h3>Wants&#x1f97a;</h3>
+                  <p class="tags small bulleted">
+                    <span class="tag"> BE HEALTHY</span
+                    ><span class="tag"> GROW A TREE</span
+                    ><span class="tag"> BUILD TRUMP AIRPORT</span
+                    ><span class="tag"> HAVE A TASTE</span
+                    ><span class="tag"> DO A HARLEM SHAKE IN CONGRESS</span
+                    ><span class="tag"> TO GOLF MORE OFTEN </span
+                    ><span class="tag"> WIN ALL THE COURT SUITS</span>
+                  </p>
+                </section>
                 <!-- Education -->
                 <!-- Articles -->
               </div>
@@ -779,5 +892,6 @@
         </div>
       </article>
     </main>
+    <script src="./theme.js"></script>
   </body>
 </html>
