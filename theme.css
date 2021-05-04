@@ -15,29 +15,37 @@ main {
   position: relative;
 }
 
+.datails_title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .page {
   position: relative;
   padding: 3em;
   background: inherit;
-  box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
+  box-shadow: 0 10px 100px 0 #2224261a;
   transition: box-shadow 0.2s linear;
 }
+
 .contacts li a {
   color: inherit;
   transition: color 0.2s ease-in-out;
 }
+
 .details > input::after {
   content: " ";
   border-top: 0.35em solid transparent;
   border-bottom: 0.35em solid transparent;
-  border-left: 0.5em solid rgb(10, 13, 184);
-  border-right: 0.5em solid rgb(10, 13, 184);
+  border-left: 0.5em solid #0a0db8;
+  border-right: 0.5em solid #0a0db8;
   color: inherit;
   position: relative;
   width: 0.7em;
   height: 0.9em;
   cursor: pointer;
 }
+
 .divider.fat {
   color: inherit;
   border-top: 0.3571428571428571em solid;
@@ -46,15 +54,12 @@ main {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: color 150ms var(--timing-function),
-    background-color 150ms var(--timing-function);
+  transition: background-color 150ms var(--timing-function);
 }
 
 body.light-theme {
   background: #fff;
-  color: #333333;
+  color: #333;
 }
 
 body.dark-theme {
@@ -125,7 +130,7 @@ body.dark-theme {
   border-radius: 50%;
   z-index: 2;
   pointer-events: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px #00000040;
   transform: translateX(3px);
   transition: transform 250ms var(--timing-function);
 }
