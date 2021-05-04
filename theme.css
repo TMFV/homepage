@@ -14,7 +14,10 @@ main {
   background: inherit;
   position: relative;
 }
-
+.datails_title {
+  font-size: 20px;
+  font-weight: 600;
+}
 .page {
   position: relative;
   padding: 3em;
